@@ -46,4 +46,4 @@ jobs:
         id: step-with-output
         run: echo "some-variable=something" >> $GITHUB_OUTPUT
       - name: This step uses the previous variable
-        run: echo "${{ steps.step-with-output.some-variable }}"
+        run: echo "${{ steps.step-with-output.output.some-variable }}"
